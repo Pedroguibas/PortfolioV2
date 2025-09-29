@@ -1,0 +1,17 @@
+header {
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    border-bottom: 1px solid white;
+    mask: linear-gradient( 90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent)
+}
