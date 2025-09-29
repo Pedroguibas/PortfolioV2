@@ -1,12 +1,17 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 #root {
+  --bg-primary: hsl(0, 0%, 100%);
+  --text-primary: hsl(0, 0%, 0%);
 
-  --bg-primary: hsl(0, 0, 100%);
-  
+  --highlight-primary: hsl(194, 100%, 33%);
+  --highlight-secondary: hsl(276, 100%, 67%);
+
   &.dark {
     --bg-primary: hsl(0, 0%, 0%);
+    --text-primary: hsl(0, 0%, 100%);
   }
+
   height: 100vh;
   background: var(--bg-primary);
 }
