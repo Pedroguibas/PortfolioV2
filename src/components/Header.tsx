@@ -1,4 +1,4 @@
-import logo from "../assets/logo/logo_full_blue.png";
+import brand from "../assets/brand/brand_full_blue.png";
 import { useState } from "react";
 import {
   Translate,
@@ -28,10 +28,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="grid grid-cols-12 sticky py-2">
+      <header className="grid grid-cols-12 sticky top-0 py-2">
         <nav className="grid grid-cols-12 col-span-10 col-start-2 items-center">
           <a href="#" className="col-span-4 sm:col-span-3 md:col-span-2">
-            <img src={logo} alt="logo" className="w-full lg:w-[75%]" />
+            <img src={brand} alt="brand" className="w-full lg:w-[75%]" />
           </a>
           <div className="col-span-8 sm:col-span-9 md:col-span-10 flex justify-end items-center gap-3">
             <button

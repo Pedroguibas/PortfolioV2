@@ -3,7 +3,9 @@
 #root {
   --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 90%);
+  --bg-tertiary: hsl(0, 0%, 80%);
   --text-primary: hsl(0, 0%, 0%);
+  --text-secondary: hsl(0, 0%, 15%);
 
   --highlight-primary: hsl(194, 100%, 33%);
   --highlight-secondary: hsl(276, 100%, 67%);
@@ -11,9 +13,10 @@
   &.dark {
     --bg-primary: hsl(0, 0%, 0%);
     --bg-secondary: hsl(0, 0%, 10%);
+    --bg-tertiary: hsl(0, 0%, 20%);
     --text-primary: hsl(0, 0%, 100%);
+    --text-secondary: hsl(0, 0%, 85%);
   }
 
-  height: 100vh;
   background: var(--bg-primary);
 }
