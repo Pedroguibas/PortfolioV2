@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="grid grid-cols-12 sticky py-5">
+      <header className="grid grid-cols-12 sticky py-2">
         <nav className="grid grid-cols-12 col-span-10 col-start-2 items-center">
           <a href="#" className="col-span-4 sm:col-span-3 md:col-span-2">
             <img src={logo} alt="logo" className="w-full lg:w-[75%]" />
@@ -54,7 +54,7 @@ export default function Header() {
 
             <div
               className={`navbarSuppendedContent absolute top-0 h-[100vh] border-2 border-[var(--highlight-primary)] ${
-                isNavbarSupportedContentShown ? "left-[-100%]" : "left-0"
+                isNavbarSupportedContentShown ? "left-0" : "left-[-100%]"
               } w-60 z-2 md:w-fit md:static md:border-none md:h-fit bg-[var(--bg-primary)] transition-all duration-200`}
             >
               <button
@@ -81,7 +81,7 @@ export default function Header() {
             <div
               onClick={toggleNavbarSupportedContent}
               className={`dimmer absolute top-0 left-0 h-[100vh] w-full z-1 bg-black opacity-75 ${
-                isNavbarSupportedContentShown ? "hidden" : ""
+                isNavbarSupportedContentShown ? "" : "hidden"
               } md:hidden`}
             ></div>
           </div>

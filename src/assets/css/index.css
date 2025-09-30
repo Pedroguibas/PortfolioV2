@@ -2,6 +2,7 @@
 
 #root {
   --bg-primary: hsl(0, 0%, 100%);
+  --bg-secondary: hsl(0, 0%, 90%);
   --text-primary: hsl(0, 0%, 0%);
 
   --highlight-primary: hsl(194, 100%, 33%);
@@ -9,6 +10,7 @@
 
   &.dark {
     --bg-primary: hsl(0, 0%, 0%);
+    --bg-secondary: hsl(0, 0%, 10%);
     --text-primary: hsl(0, 0%, 100%);
   }
 
