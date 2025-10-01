@@ -1,0 +1,18 @@
+{
+  "pt": {
+    "nav": {
+      "translate": "English",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contactMe": "Contatos"
+    }
+  },
+  "en": {
+    "nav": {
+      "translate": "Português",
+      "about": "About",
+      "projects": "Projects",
+      "contactMe": "Contact-me"
+    }
+  }
+}
