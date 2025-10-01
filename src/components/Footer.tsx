@@ -1,10 +1,12 @@
 import white_brand from "../assets/brand/brand_full_white.png";
 import black_brand from "../assets/brand/brand_full_black.png";
 import "../assets/css/footer.css";
+import { useLanguage } from "./shared/LanguageContext";
 import { useState, useEffect } from "react";
 
 export default function Footer() {
   const [isDark, setIsDark] = useState(true);
+  const { txt } = useLanguage();
 
   useEffect(() => {
     const checkTheme = () => {
@@ -41,16 +43,13 @@ export default function Footer() {
             </h2>
             <ul className="flex flex-col gap-2">
               <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
+                <a href="#">{txt.nav.about}</a>
               </li>
               <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
+                <a href="#">{txt.nav.projects}</a>
               </li>
               <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
+                <a href="#">{txt.nav.contactMe}</a>
               </li>
             </ul>
           </div>
