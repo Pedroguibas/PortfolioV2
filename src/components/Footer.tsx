@@ -26,7 +26,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[var(--bg-secondary)] grid grid-cols-12">
-      <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 my-8">
+      <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
         <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:my-8">
           <img
             src={isDark ? white_brand : black_brand}
@@ -77,6 +77,10 @@ export default function Footer() {
           </div>
         </div>
       </section>
+      <aside className="col-span-10 col-start-2 flex items-center gap-1 text-[var(--text-primary)] text-lg py-3">
+        <span>&copy;</span>
+        <p>Pedro Guimarães Bastos</p>
+      </aside>
     </footer>
   );
 }
