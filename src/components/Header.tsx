@@ -8,10 +8,12 @@ import {
   XLg,
 } from "react-bootstrap-icons";
 import "../assets/css/header.css";
+import { useLanguage } from "./shared/LanguageContext";
 
 export default function Header() {
   const root: HTMLElement = document.querySelector("#root")!;
   const [isDark, setIsDark] = useState(true);
+  const { language, setLanguage, txt } = useLanguage();
 
   const toggleDark = () => {
     root.classList.toggle("dark");
@@ -40,9 +42,12 @@ export default function Header() {
             >
               {isDark ? <SunFill /> : <MoonStarsFill />}
             </button>
-            <button className="translateBtn flex gap-1 border-1 py-1 px-1.5 rounded-md items-center text-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:bg-[var(--text-primary)] transition-colors duration-200 cursor-pointer">
+            <button
+              className="translateBtn flex gap-1 border-1 py-1 px-1.5 rounded-md items-center text-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:bg-[var(--text-primary)] transition-colors duration-200 cursor-pointer"
+              onClick={() => setLanguage(language == "pt" ? "en" : "pt")}
+            >
               <Translate />
-              <span className="hidden md:block">English</span>
+              <span className="hidden md:block">{txt.nav.translate}</span>
             </button>
 
             <button
@@ -65,16 +70,13 @@ export default function Header() {
               </button>
               <ul className="flex flex-col gap-3 pt-12 items-center md:pt-0 md:flex-row text-[var(--text-primary)]">
                 <li>
-                  <a href="#">link</a>
+                  <a href="#">{txt.nav.about}</a>
                 </li>
                 <li>
-                  <a href="#">link</a>
+                  <a href="#">{txt.nav.projects}</a>
                 </li>
                 <li>
-                  <a href="#">link</a>
-                </li>
-                <li>
-                  <a href="#">link</a>
+                  <a href="#">{txt.nav.contactMe}</a>
                 </li>
               </ul>
             </div>

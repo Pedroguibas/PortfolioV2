@@ -1,4 +1,5 @@
 import React from "react";
+import { LanguageProvider } from "./LanguageContext";
 import Header from "../Header";
 import Footer from "../Footer";
 
@@ -8,10 +9,12 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <>
-      <Header />
-      <main className="min-h-[100vh]">{children}</main>
-      <Footer />
-    </>
+    <LanguageProvider>
+      <>
+        <Header />
+        <main className="min-h-[100vh]">{children}</main>
+        <Footer />
+      </>
+    </LanguageProvider>
   );
 }
