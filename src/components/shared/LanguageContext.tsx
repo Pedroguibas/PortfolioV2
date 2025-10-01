@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import text from "../../assets/data/text.json";
 import React from "react";
 
+type Language = "pt" | "en";
 type TextJSON = (typeof text)[Language];
 
 type LanguageContextType = {
@@ -9,8 +10,6 @@ type LanguageContextType = {
   setLanguage: React.Dispatch<React.SetStateAction<Language>>;
   txt: TextJSON;
 };
-
-type Language = "pt" | "en";
 
 interface LanguageProviderChildren {
   children: React.ReactNode;
@@ -35,6 +34,6 @@ export function LanguageProvider({ children }: LanguageProviderChildren) {
 export function useLanguage() {
   const ctxt = useContext(LanguageContext);
   if (!ctxt)
-    throw new Error("useLanguage deve ser usado dentro de LanguageProvider.");
+    throw new Error("useLanguage must be used insed LanguageProvider.");
   return ctxt;
 }
