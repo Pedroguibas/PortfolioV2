@@ -5,6 +5,10 @@
       "about": "Sobre",
       "projects": "Projetos",
       "contactMe": "Contatos"
+    },
+    "footer": {
+      "quickLinks": "Links rápidos",
+      "contactMe": "Contatos"
     }
   },
   "en": {
@@ -13,6 +17,10 @@
       "about": "About",
       "projects": "Projects",
       "contactMe": "Contact-me"
+    },
+    "footer": {
+      "quickLinks": "Quick links",
+      "contactMe": "Contact me"
     }
   }
 }

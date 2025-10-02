@@ -18,47 +18,50 @@ export default function Footer() {
             className="w-38 md:w-52 lg:60"
           />
         </div>
-        <div className="footer-links flex flex-col text-sm text-[var(--text-secondary)] md:text-md md:items-center my-8 md:my-8">
-          <div className="flex flex-col">
-            <h2 className="text-[var(--text-primary)] font-bold text-md md:text-xl mb-4">
-              Links rápidos
-            </h2>
-            <ul className="flex flex-col gap-2">
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">{txt.nav.about}</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">{txt.nav.projects}</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">{txt.nav.contactMe}</a>
-              </li>
-            </ul>
+        <div className="flex justify-around items-start col-span-1 md:col-span-2 mt-8">
+
+          <div className="footer-links flex flex-col text-sm text-[var(--text-secondary)] md:text-md md:items-center ">
+            <div className="flex flex-col">
+              <h2 className="text-[var(--text-primary)] font-bold text-md md:text-xl mb-4">
+                {txt.footer.quickLinks}
+              </h2>
+              <ul className="flex flex-col gap-2">
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">{txt.nav.about}</a>
+                </li>
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">{txt.nav.projects}</a>
+                </li>
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">{txt.nav.contactMe}</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="footer-contacts flex flex-col text-sm text-[var(--text-secondary)] md:text-md md:items-center my-4 md:my-8">
-          <div className="flex flex-col">
-            <h2 className="text-[var(--text-primary)] font-bold md:text-xl mb-4">
-              Contato
-            </h2>
-            <ul className="flex flex-col gap-2">
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
-              </li>
-              <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                <a href="#">link</a>
-              </li>
-            </ul>
+          <div className="footer-contacts flex flex-col text-sm text-[var(--text-secondary)] md:text-md md:items-center">
+            <div className="flex flex-col">
+              <h2 className="text-[var(--text-primary)] font-bold md:text-xl mb-4">
+                {txt.footer.contactMe}
+              </h2>
+              <ul className="flex flex-col gap-2">
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">link</a>
+                </li>
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">link</a>
+                </li>
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">link</a>
+                </li>
+                <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
+                  <a href="#">link</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <aside className="col-span-10 col-start-2 flex items-center gap-1 text-[var(--text-primary)] text-lg py-3">
+      <aside className="col-span-10 col-start-2 flex items-center gap-1 text-[var(--text-primary)] text-sm md:text-lg py-3">
         <span>&copy;</span>
         <p>Pedro Guimarães Bastos</p>
       </aside>
