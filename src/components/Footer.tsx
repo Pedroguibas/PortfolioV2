@@ -2,36 +2,18 @@ import white_brand from "../assets/brand/brand_full_white.png";
 import black_brand from "../assets/brand/brand_full_black.png";
 import "../assets/css/footer.css";
 import { useLanguage } from "./shared/LanguageContext";
-import { useState, useEffect } from "react";
+import { useTheme } from "./shared/ThemeContext";
 
 export default function Footer() {
-  const [isDark, setIsDark] = useState(true);
   const { txt } = useLanguage();
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const root = document.querySelector("#root")!;
-      setIsDark(root.classList.contains("dark") || false);
-    };
-
-    checkTheme();
-
-    const observer = new MutationObserver(checkTheme);
-    const root = document.querySelector("#root")!;
-    observer.observe(root, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <footer className="bg-[var(--bg-secondary)] grid grid-cols-12">
       <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
         <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:my-8">
           <img
-            src={isDark ? white_brand : black_brand}
+            src={theme == "dark" ? white_brand : black_brand}
             alt="Brand"
             className="w-38 md:w-52 lg:60"
           />

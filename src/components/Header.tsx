@@ -1,4 +1,6 @@
 import brand from "../assets/brand/brand_full_blue.png";
+import { useLanguage } from "./shared/LanguageContext";
+import { useTheme } from "./shared/ThemeContext";
 import { useState } from "react";
 import {
   Translate,
@@ -8,16 +10,15 @@ import {
   XLg,
 } from "react-bootstrap-icons";
 import "../assets/css/header.css";
-import { useLanguage } from "./shared/LanguageContext";
 
 export default function Header() {
   const root: HTMLElement = document.querySelector("#root")!;
-  const [isDark, setIsDark] = useState(true);
+  const { theme, setTheme } = useTheme();
   const { language, setLanguage, txt } = useLanguage();
 
   const toggleDark = () => {
     root.classList.toggle("dark");
-    setIsDark(isDark ? false : true);
+    setTheme(theme == "dark" ? "light" : "dark");
   };
 
   const [isNavbarSupportedContentShown, setIsNavbarSupportedContentShown] =
@@ -40,7 +41,7 @@ export default function Header() {
               onClick={toggleDark}
               className="text-[var(--text-primary)] text-xl hover:text-amber-300 cursor-pointer transition-colors duration-200"
             >
-              {isDark ? <SunFill /> : <MoonStarsFill />}
+              {theme == "dark" ? <SunFill /> : <MoonStarsFill />}
             </button>
             <button
               className="translateBtn flex gap-1 border-1 py-1 px-1.5 rounded-md items-center text-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:bg-[var(--text-primary)] transition-colors duration-200 cursor-pointer"
@@ -60,7 +61,7 @@ export default function Header() {
             <div
               className={`navbarSuppendedContent absolute top-0 h-[100vh] border-2 border-[var(--highlight-primary)] ${
                 isNavbarSupportedContentShown ? "left-0" : "left-[-100%]"
-              } w-60 z-2 md:w-fit md:static md:border-none md:h-fit bg-[var(--bg-primary)] transition-all duration-200`}
+              } w-60 z-2 md:w-fit md:static md:border-none md:h-fit md:transition-none bg-[var(--bg-primary)] transition-all duration-200`}
             >
               <button
                 onClick={toggleNavbarSupportedContent}
