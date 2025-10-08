@@ -1,18 +1,18 @@
 import pfp from "../assets/profile-pic.jpeg";
-import { Github, Linkedin } from "react-bootstrap-icons";
 import "../assets/css/hero.css";
+import { Github, Linkedin } from "react-bootstrap-icons";
 import { useLanguage } from "./shared/LanguageContext";
 
 export default function Hero() {
   const { txt } = useLanguage();
 
-  const handleRedirect = (ref: string) => {
-    window.location.href = ref;
+  const handleRedirect = (url: string) => {
+    window.location.href = url;
   };
 
   return (
-    <section className="heroSection grid grid-cols-12">
-      <div className="col-span-10 col-start-2 grid grid-cols-1 gap-32 md:gap-0 md:grid-cols-2 justify-center text-[var(--text-primary)] py-20 md:py-28">
+    <section className="heroSection scroll-in grid grid-cols-12">
+      <div className="col-span-10 col-start-2 grid grid-cols-1 gap-32 md:gap-0 md:grid-cols-2 justify-center text-[var(--text-primary)] pt-20 md:pt-28">
         <div className="profileInfo content-center text-sm md:text-base lg:text-2xl lg:ms-16">
           <p className="greeting">
             {txt.hero.greeting}{" "}
@@ -30,8 +30,8 @@ export default function Hero() {
             <img src={pfp} alt="Profile picture" className="w-64" />
           </div>
         </div>
-        <div className="links md:col-span-2 flex justify-center gap-4 md:mt-20 text-xl ">
-          <button className="text-[var(--highlight-secondary)] border py-1 px-3 rounded-full hover:text-[var(--bg-primary)] hover:bg-[var(--highlight-secondary)] transition-colors duration-250 cursor-pointer">
+        <div className="links md:col-span-2 flex justify-center gap-4 mb-20 md:mt-20 text-xl ">
+          <button className="cvBtn text-[var(--highlight-secondary)] border py-1 px-3 rounded-lg transition-all duration-250 cursor-pointer">
             {txt.hero.cv}
           </button>
           <button

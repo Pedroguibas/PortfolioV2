@@ -11,3 +11,7 @@
     line-height: .8em;
     font-size: 2.3em;
 }
+
+.cvBtn:hover {
+    box-shadow: var(--highlight-secondary) 0px 0px 6px;
+}
