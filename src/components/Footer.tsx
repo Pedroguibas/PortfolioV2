@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--bg-secondary)] grid grid-cols-12">
       <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
-        <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:my-8">
+        <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:mb-8">
           <img
             src={theme == "dark" ? white_brand : black_brand}
             alt="Brand"
@@ -19,11 +19,10 @@ export default function Footer() {
           />
         </div>
         <div className="flex justify-around items-start col-span-1 md:col-span-2 mt-8">
-
           <div className="footer-links flex flex-col text-sm text-[var(--text-secondary)] md:text-md md:items-center ">
             <div className="flex flex-col">
               <h2 className="text-[var(--text-primary)] font-bold text-md md:text-xl mb-4">
-                {txt.footer.quickLinks}
+                Links
               </h2>
               <ul className="flex flex-col gap-2">
                 <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">

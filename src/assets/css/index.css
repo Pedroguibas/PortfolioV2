@@ -1,19 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 
 #root {
   --bg-primary: hsl(0, 0%, 100%);
-  --bg-secondary: hsl(0, 0%, 90%);
-  --bg-tertiary: hsl(0, 0%, 80%);
+  --bg-secondary: hsl(0, 0%, 85%);
+  --bg-tertiary: hsl(0, 0%, 75%);
   --text-primary: hsl(0, 0%, 0%);
   --text-secondary: hsl(0, 0%, 15%);
 
-  --highlight-primary: hsl(194, 100%, 33%);
+  --highlight-primary: hsl(194, 100%, 40%);
   --highlight-secondary: hsl(276, 100%, 67%);
 
   &.dark {
-    --bg-primary: hsl(0, 0%, 0%);
-    --bg-secondary: hsl(0, 0%, 10%);
-    --bg-tertiary: hsl(0, 0%, 20%);
+    --bg-primary: hsl(0, 0%, 8%);
+    --bg-secondary: hsl(0, 0%, 18%);
+    --bg-tertiary: hsl(0, 0%, 23%);
     --text-primary: hsl(0, 0%, 100%);
     --text-secondary: hsl(0, 0%, 85%);
   }

@@ -1,0 +1,13 @@
+.profileImageDiv .profileImage {
+    box-shadow: hsla(194, 100%, 33%, 70%) 30px 30px 50px, hsla(276, 100%, 67%, 70%) -20px -40px 50px;
+}
+
+.profileInfo .profileHighlight {
+    font-family: Bebas Neue, sans-serif;
+    font-size: 1.5em;
+}
+
+.profileInfo .occupation {
+    line-height: .8em;
+    font-size: 2.3em;
+}
