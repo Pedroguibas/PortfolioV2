@@ -27,7 +27,7 @@
     "hero": {
       "greeting": "👋 Hello! I'm",
       "occupation": "Web Developer",
-      "introduction": "with experience in front-end, back-end, and systems integration, always prioritizing good practices, versioning and valuable delivery from the first commit. In constant technical development and ready for contributing in collaborative environments",
+      "introduction": "with experience in front-end, back-end, and systems integration, always prioritizing good practices, versioning and valuable delivery from the first commit. In constant technical development and ready for contributing in collaborative environments.",
       "cv": "Resumé"
     },
     "footer": {

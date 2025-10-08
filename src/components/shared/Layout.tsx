@@ -14,8 +14,8 @@ export default function Layout({ children }: LayoutProps) {
       <ThemeProvider>
         <>
           <Header />
-          <main className="grid grid-cols-12">
-            <div className="col-span-10 col-start-2">{children}</div>
+          <main>
+            <div>{children}</div>
           </main>
           <Footer />
         </>
