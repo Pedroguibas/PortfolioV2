@@ -6,6 +6,12 @@
       "projects": "Projetos",
       "contactMe": "Contatos"
     },
+    "hero": {
+      "greeting": "👋 Olá! Sou",
+      "occupation": "Desenvolvedor Web",
+      "introduction": "com experiência em front-end, back-end e integração de sistemas, sempre priorizando boas práticas, versionamento e entrega de valor desde o primeiro commit. Em constante evolução técnica e pronto para contribuir em ambientes colaborativos.",
+      "cv": "Currículo"
+    },
     "footer": {
       "quickLinks": "Links rápidos",
       "contactMe": "Contatos"
@@ -17,6 +23,12 @@
       "about": "About",
       "projects": "Projects",
       "contactMe": "Contact-me"
+    },
+    "hero": {
+      "greeting": "👋 Hello! I'm",
+      "occupation": "Web Developer",
+      "introduction": "with experience in front-end, back-end, and systems integration, always prioritizing good practices, versioning and valuable delivery from the first commit. In constant technical development and ready for contributing in collaborative environments.",
+      "cv": "Curriculum"
     },
     "footer": {
       "contactMe": "Contact me"

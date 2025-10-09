@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--bg-secondary)] grid grid-cols-12">
       <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
-        <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:my-8">
+        <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:mb-8">
           <img
             src={theme == "dark" ? white_brand : black_brand}
             alt="Brand"

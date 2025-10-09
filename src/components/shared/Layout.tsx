@@ -14,7 +14,9 @@ export default function Layout({ children }: LayoutProps) {
       <ThemeProvider>
         <>
           <Header />
-          <main className="min-h-[100vh]">{children}</main>
+          <main>
+            <div>{children}</div>
+          </main>
           <Footer />
         </>
       </ThemeProvider>
