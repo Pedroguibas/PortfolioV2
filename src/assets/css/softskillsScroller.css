@@ -1,0 +1,39 @@
+@keyframes infiniteScroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.softskillsScroller .softskillsList {
+  --softskills-scroller-gap: 4em;
+
+  gap: var(--softskills-scroller-gap);
+  padding-left: var(--softskills-scroller-gap);
+  animation-name: infiniteScroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 45s;
+  cursor: default;
+}
+
+.softskillsScroller .softskillsList:hover {
+  animation-play-state: paused;
+}
+
+.softskillsScroller .softskillsList .softskillsItem {
+  font-family: Bebas Neue, sans-serif;
+}
+
+.softskillsScroller .softskillsList .softskillsItem::before {
+  content: "🞍";
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: calc(var(--softskills-scroller-gap) / -2);
+}
+
+@media (width > 48rem) {
+  .softskillsScroller .softskillsList {
+    --softskills-scroller-gap: 8em;
+  }
+}

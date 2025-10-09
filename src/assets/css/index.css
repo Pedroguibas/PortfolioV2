@@ -1,28 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 
-@keyframes scroll-in {
-  0% {
-    transform: translateY(10%);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 100%;
-  }
-}
-
-.scroll-in {
-  animation-name: scroll-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+root * {
+  font-family: sans-serif;
 }
 
 #root {
-  & * {
-    font-family: sans-serif;
-  }
-
   --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 85%);
   --bg-tertiary: hsl(0, 0%, 75%);
@@ -41,4 +24,21 @@
   }
 
   background: var(--bg-primary);
+}
+
+@keyframes scroll-in {
+  0% {
+    transform: translateY(10%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+.scroll-in {
+  animation-name: scroll-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
