@@ -1,0 +1,30 @@
+[
+  {
+    "icon": "html",
+    "name": "HTML"
+  },
+  {
+    "icon": "css",
+    "name": "CSS"
+  },
+  {
+    "icon": "js",
+    "name": "JavaScript"
+  },
+  {
+    "icon": "ts",
+    "name": "TypeScript"
+  },
+  {
+    "icon": "react",
+    "name": "ReactJs"
+  },
+  {
+    "icon": "node",
+    "name": "NodeJs"
+  },
+  {
+    "icon": "php",
+    "name": "PHP"
+  }
+]
