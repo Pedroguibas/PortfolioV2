@@ -33,11 +33,28 @@ export default function Technologies() {
 
   const [hoveredTech, setHoveredTech] = useState("");
   const [clickedTech, setClickedTech] = useState("HTML");
+  const [currentClickedIcon, setCurrentClickecIcon] = useState("html");
+  const [currentHoveredIcon, setCurrentHoveredIcon] = useState("");
+
+  const handleClick = (icon: string, name: string) => {
+    setClickedTech(name);
+    setCurrentClickecIcon(icon);
+  }
+
+  const handleMouseEnter = (icon: string, name: string) => {
+    setHoveredTech(name);
+    setCurrentHoveredIcon(icon);
+  }
+
+  const handleMouseLeave = () => {
+    setHoveredTech("");
+    setCurrentHoveredIcon("");
+  }
 
   return (
     <section className="technologiesSection relative z-1 flex flex-col items-center py-16 text-[var(--text-primary)]">
       <h1 className="techTitle text-4xl">{txt.tech.title}</h1>
-      <span className="techName mt-12 mb-2">
+      <span className={`techName mt-12 mb-2 text-[var(--tech-icon-color)] ${currentHoveredIcon == "" ? currentClickedIcon : currentHoveredIcon}`}>
         {hoveredTech != "" ? hoveredTech : clickedTech}
       </span>
       <div className="techBtnContainer grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 mt-8">
@@ -47,9 +64,9 @@ export default function Technologies() {
             className={`${clickedTech == tech.name ? "clicked" : ""} techBtn ${
               tech.icon
             } bg-[var(--bg-primary)] p-2 border-2 rounded-lg border-[var(--tech-icon-color)] cursor-pointer transition-all duration-150`}
-            onMouseEnter={() => setHoveredTech(tech.name)}
-            onMouseLeave={() => setHoveredTech("")}
-            onClick={() => setClickedTech(tech.name)}
+            onMouseEnter={() => handleMouseEnter(tech.icon, tech.name)}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => handleClick(tech.icon, tech.name)}
           >
             <TechIcon icon={tech.icon} />
           </button>

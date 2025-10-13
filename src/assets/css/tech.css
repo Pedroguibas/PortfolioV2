@@ -119,7 +119,14 @@
       filter: drop-shadow(0 0 10px var(--tech-icon-light));
     }
   }
+}
 
+.techName {
+  filter: drop-shadow(0 0 5px var(--tech-icon-light));
+}
+
+.techBtn,
+.techName {  
   &.html {
     --tech-icon-light: hsl(13, 90%, 65%);
     --tech-icon-color: hsl(13, 77%, 52%);
