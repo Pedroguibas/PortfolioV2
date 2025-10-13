@@ -1,6 +1,6 @@
 import pfp from "../assets/profile-pic.jpeg";
 import "../assets/css/hero.css";
-import { Github, Linkedin } from "react-bootstrap-icons";
+import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
 import { useLanguage } from "./shared/LanguageContext";
 
 export default function Hero() {
@@ -49,6 +49,12 @@ export default function Hero() {
             className="p-2 bg-[var(--bg-secondary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
           >
             <Linkedin />
+          </button>
+          <button
+            onClick={() => handleRedirect("mailto:pedroguibas123@gmail.com")}
+            className="p-2 bg-[var(--bg-secondary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
+          >
+            <Envelope />
           </button>
         </div>
       </div>
