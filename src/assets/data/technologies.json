@@ -8,6 +8,10 @@
     "name": "CSS"
   },
   {
+    "icon": "tailwind",
+    "name": "Tailwind CSS"
+  },
+  {
     "icon": "js",
     "name": "JavaScript"
   },
@@ -20,11 +24,23 @@
     "name": "ReactJs"
   },
   {
+    "icon": "mysql",
+    "name": "MySQL"
+  },
+  {
+    "icon": "mongo",
+    "name": "MongoDB"
+  },
+  {
     "icon": "node",
     "name": "NodeJs"
   },
   {
     "icon": "php",
     "name": "PHP"
+  },
+  {
+    "icon": "java",
+    "name": "Java"
   }
 ]

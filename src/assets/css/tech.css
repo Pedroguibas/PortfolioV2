@@ -87,6 +87,11 @@
   }
 }
 
+.techName {
+  font-family: Michroma;
+  transform: scaleY(1.5);
+}
+
 .techBtnContainer {
   max-width: 80vw;
   transform-style: preserve-3d;
@@ -101,7 +106,8 @@
     var(--tech-icon-dark) 3px 3px, var(--tech-icon-dark) 2px 2px,
     var(--tech-icon-dark) 1px 1px;
 
-  &:hover {
+  &:hover,
+  &.clicked {
     color: var(--tech-icon-light);
     transform: translateZ(0.5rem);
     border-color: var(--tech-icon-light);
@@ -122,6 +128,12 @@
     --tech-icon-dark: hsl(222, 78%, 45%);
   }
 
+  &.tailwind {
+    --tech-icon-light: hsl(200, 90%, 75%);
+    --tech-icon-color: hsl(200, 90%, 62%);
+    --tech-icon-dark: hsl(200, 90%, 45%);
+  }
+
   &.js {
     --tech-icon-light: hsl(53, 97%, 68%);
     --tech-icon-color: hsl(53, 93%, 54%);
@@ -140,6 +152,18 @@
     --tech-icon-dark: hsl(189, 100%, 40%);
   }
 
+  &.mysql {
+    --tech-icon-light: hsl(191, 100%, 40%);
+    --tech-icon-color: hsl(191, 100%, 28%);
+    --tech-icon-dark: hsl(191, 100%, 18%);
+  }
+
+  &.mongo {
+    --tech-icon-light: hsl(99, 47%, 55%);
+    --tech-icon-color: hsl(99, 47%, 40%);
+    --tech-icon-dark: hsl(99, 47%, 25%);
+  }
+
   &.node {
     --tech-icon-light: hsl(103, 50%, 53%);
     --tech-icon-color: hsl(115, 37%, 39%);
@@ -150,5 +174,11 @@
     --tech-icon-light: hsl(229, 35%, 78%);
     --tech-icon-color: hsl(229, 29%, 64%);
     --tech-icon-dark: hsl(229, 30%, 44%);
+  }
+
+  &.java {
+    --tech-icon-light: hsl(204, 40%, 65%);
+    --tech-icon-color: hsl(204, 32%, 48%);
+    --tech-icon-dark: hsl(204, 32%, 35%);
   }
 }
