@@ -114,6 +114,10 @@
     box-shadow: var(--tech-icon-color) 5px 5px, var(--tech-icon-color) 4px 4px,
       var(--tech-icon-color) 3px 3px, var(--tech-icon-color) 2px 2px,
       var(--tech-icon-color) 1px 1px, var(--tech-icon-light) 6px 6px 20px;
+
+    & .techIcon {
+      filter: drop-shadow(0 0 10px var(--tech-icon-color));
+    }
   }
 
   &.html {
