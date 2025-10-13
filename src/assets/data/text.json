@@ -21,6 +21,9 @@
       "Organização",
       "Proatividade"
     ],
+    "tech": {
+      "title": "Tecnologias"
+    },
     "footer": {
       "quickLinks": "Links rápidos",
       "contactMe": "Contatos"
@@ -48,6 +51,9 @@
       "Organization",
       "Proactivity"
     ],
+    "tech": {
+      "title": "Technologies"
+    },
     "footer": {
       "contactMe": "Contact me"
     }

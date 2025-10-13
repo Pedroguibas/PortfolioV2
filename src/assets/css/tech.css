@@ -1,0 +1,184 @@
+.techIcon path,
+.techIcon g,
+.techIcon polygon,
+.techIcon rect {
+  fill: currentColor !important;
+}
+
+.technologiesSection {
+  mask: linear-gradient(transparent, transparent 40px, white 70px);
+}
+
+.technologiesSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  background: repeating-linear-gradient(
+      transparent 0px,
+      transparent 25px,
+      var(--text-primary) 25px,
+      var(--text-primary) 26px,
+      transparent 26px,
+      transparent 51px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 25px,
+      var(--text-primary) 25px,
+      var(--text-primary) 26px,
+      transparent 26px,
+      transparent 51px
+    );
+
+  mask: linear-gradient(
+    90deg,
+    white,
+    white 5%,
+    transparent 20%,
+    transparent 80%,
+    white 95%,
+    white
+  );
+}
+
+.technologiesSection::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  z-index: 2;
+  background: linear-gradient(
+    transparent,
+    var(--bg-primary) 30px,
+    var(--bg-primary)
+  );
+}
+
+.technologiesSection .techTitle {
+  font-family: Bebas Neue, sans-serif;
+}
+
+@media (width < 48rem) {
+  .technologiesSection::after,
+  .technologiesSection::before {
+    display: none;
+  }
+}
+
+@media (width < 64rem) {
+  .technologiesSection::before {
+    mask: linear-gradient(
+      90deg,
+      white,
+      white 5%,
+      transparent 15%,
+      transparent 85%,
+      white 95%,
+      white
+    );
+  }
+}
+
+.techName {
+  font-family: Michroma;
+  transform: scaleY(1.5);
+}
+
+.techBtnContainer {
+  max-width: 80vw;
+  transform-style: preserve-3d;
+  transform: rotate3d(1, -1, 0.3, 30deg);
+}
+
+.techBtn {
+  color: var(--tech-icon-color);
+  transform-style: preserve-3d;
+
+  box-shadow: var(--tech-icon-dark) 5px 5px, var(--tech-icon-dark) 4px 4px,
+    var(--tech-icon-dark) 3px 3px, var(--tech-icon-dark) 2px 2px,
+    var(--tech-icon-dark) 1px 1px;
+
+  &:hover,
+  &.clicked {
+    color: var(--tech-icon-light);
+    transform: translateZ(0.5rem);
+    border-color: var(--tech-icon-light);
+    box-shadow: var(--tech-icon-color) 5px 5px, var(--tech-icon-color) 4px 4px,
+      var(--tech-icon-color) 3px 3px, var(--tech-icon-color) 2px 2px,
+      var(--tech-icon-color) 1px 1px, var(--tech-icon-light) 6px 6px 20px;
+  }
+
+  &.html {
+    --tech-icon-light: hsl(13, 90%, 65%);
+    --tech-icon-color: hsl(13, 77%, 52%);
+    --tech-icon-dark: hsl(13, 77%, 35%);
+  }
+
+  &.css {
+    --tech-icon-light: hsl(222, 88%, 68%);
+    --tech-icon-color: hsl(222, 88%, 55%);
+    --tech-icon-dark: hsl(222, 78%, 45%);
+  }
+
+  &.tailwind {
+    --tech-icon-light: hsl(200, 90%, 75%);
+    --tech-icon-color: hsl(200, 90%, 62%);
+    --tech-icon-dark: hsl(200, 90%, 45%);
+  }
+
+  &.js {
+    --tech-icon-light: hsl(53, 97%, 68%);
+    --tech-icon-color: hsl(53, 93%, 54%);
+    --tech-icon-dark: hsl(53, 93%, 40%);
+  }
+
+  &.ts {
+    --tech-icon-light: hsl(211, 68%, 65%);
+    --tech-icon-color: hsl(211, 60%, 48%);
+    --tech-icon-dark: hsl(211, 60%, 35%);
+  }
+
+  &.react {
+    --tech-icon-light: hsl(189, 100%, 75%);
+    --tech-icon-color: hsl(189, 100%, 50%);
+    --tech-icon-dark: hsl(189, 100%, 40%);
+  }
+
+  &.mysql {
+    --tech-icon-light: hsl(191, 100%, 40%);
+    --tech-icon-color: hsl(191, 100%, 28%);
+    --tech-icon-dark: hsl(191, 100%, 18%);
+  }
+
+  &.mongo {
+    --tech-icon-light: hsl(99, 47%, 55%);
+    --tech-icon-color: hsl(99, 47%, 40%);
+    --tech-icon-dark: hsl(99, 47%, 25%);
+  }
+
+  &.node {
+    --tech-icon-light: hsl(103, 50%, 53%);
+    --tech-icon-color: hsl(115, 37%, 39%);
+    --tech-icon-dark: hsl(115, 45%, 24%);
+  }
+
+  &.php {
+    --tech-icon-light: hsl(229, 35%, 78%);
+    --tech-icon-color: hsl(229, 29%, 64%);
+    --tech-icon-dark: hsl(229, 30%, 44%);
+  }
+
+  &.java {
+    --tech-icon-light: hsl(204, 40%, 65%);
+    --tech-icon-color: hsl(204, 32%, 48%);
+    --tech-icon-dark: hsl(204, 32%, 35%);
+  }
+}
