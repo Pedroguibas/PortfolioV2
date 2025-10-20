@@ -5,10 +5,16 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 interface LayoutProps {
+  scrollToAbout: () => void;
+  scrollToProjects: () => void;
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({
+  scrollToAbout,
+  scrollToProjects,
+  children,
+}: LayoutProps) {
   const footerRef = useRef<HTMLElement>(null);
 
   const scrollToFooter = () =>
@@ -18,7 +24,11 @@ export default function Layout({ children }: LayoutProps) {
     <LanguageProvider>
       <ThemeProvider>
         <>
-          <Header scrollToFooter={scrollToFooter} />
+          <Header
+            scrollToFooter={scrollToFooter}
+            scrollToAbout={scrollToAbout}
+            scrollToProjects={scrollToProjects}
+          />
           <main>
             <div>{children}</div>
           </main>

@@ -13,9 +13,15 @@ import "../assets/css/header.css";
 
 interface HeaderProps {
   scrollToFooter: () => void;
+  scrollToAbout: () => void;
+  scrollToProjects: () => void;
 }
 
-export default function Header({ scrollToFooter }: HeaderProps) {
+export default function Header({
+  scrollToFooter,
+  scrollToAbout,
+  scrollToProjects,
+}: HeaderProps) {
   const root: HTMLElement = document.querySelector("#root")!;
   const { theme, setTheme } = useTheme();
   const { language, setLanguage, txt } = useLanguage();
@@ -37,9 +43,16 @@ export default function Header({ scrollToFooter }: HeaderProps) {
     <>
       <header className="grid grid-cols-12 sticky top-0 py-2 bg-[var(--bg-primary)] z-10">
         <nav className="grid grid-cols-12 col-span-10 col-start-2 items-center">
-          <a href="#" className="col-span-4 sm:col-span-3 md:col-span-2">
-            <img src={brand} alt="brand" className="w-full lg:w-[50%]" />
-          </a>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="col-span-4 sm:col-span-3 md:col-span-2"
+          >
+            <img
+              src={brand}
+              alt="brand"
+              className="w-full lg:w-[50%] cursor-pointer"
+            />
+          </button>
           <div className="col-span-8 sm:col-span-9 md:col-span-10 flex justify-end items-center gap-3">
             <button
               onClick={toggleDark}
@@ -75,12 +88,18 @@ export default function Header({ scrollToFooter }: HeaderProps) {
               </button>
               <ul className="flex flex-col gap-3 pt-12 items-center md:pt-0 md:flex-row text-[var(--text-primary)]">
                 <li>
-                  <button className="nav-link relative py-0.5 px-1 cursor-pointer">
+                  <button
+                    className="nav-link relative py-0.5 px-1 cursor-pointer"
+                    onClick={scrollToAbout}
+                  >
                     {txt.nav.about}
                   </button>
                 </li>
                 <li>
-                  <button className="nav-link relative py-0.5 px-1 cursor-pointer">
+                  <button
+                    className="nav-link relative py-0.5 px-1 cursor-pointer"
+                    onClick={scrollToProjects}
+                  >
                     {txt.nav.projects}
                   </button>
                 </li>
