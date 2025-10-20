@@ -1,6 +1,5 @@
 import white_brand from "../assets/brand/brand_full_white.png";
 import black_brand from "../assets/brand/brand_full_black.png";
-import "../assets/css/footer.css";
 import { useLanguage } from "./shared/LanguageContext";
 import { useTheme } from "./shared/ThemeContext";
 import { Envelope, Whatsapp, Github, Linkedin } from "react-bootstrap-icons";
@@ -76,7 +75,7 @@ export default function Footer() {
                     onClick={() =>
                       handleRedirect("https://github.com/Pedroguibas")
                     }
-                    className="p-2 bg-[var(--bg-secondary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
+                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
                   >
                     <Github />
                   </button>
@@ -86,7 +85,7 @@ export default function Footer() {
                         "https://www.linkedin.com/in/pedro-bastos-4275b2243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                       )
                     }
-                    className="p-2 bg-[var(--bg-secondary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
+                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
                   >
                     <Linkedin />
                   </button>
@@ -96,7 +95,7 @@ export default function Footer() {
                         "mailto:pedroguibas123@gmail.com"
                       )
                     }
-                    className="p-2 bg-[var(--bg-secondary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
+                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
                   >
                     <Envelope />
                   </button>
