@@ -11,7 +11,11 @@ import {
 } from "react-bootstrap-icons";
 import "../assets/css/header.css";
 
-export default function Header() {
+interface HeaderProps {
+  scrollToFooter: () => void;
+}
+
+export default function Header({ scrollToFooter }: HeaderProps) {
   const root: HTMLElement = document.querySelector("#root")!;
   const { theme, setTheme } = useTheme();
   const { language, setLanguage, txt } = useLanguage();
@@ -59,7 +63,7 @@ export default function Header() {
             </button>
 
             <div
-              className={`navbarSuppendedContent absolute top-0 h-[100vh] border-2 border-[var(--highlight-primary)] ${
+              className={`navbarSuppendedContent absolute top-0 h-svh border-2 border-[var(--highlight-primary)] ${
                 isNavbarSupportedContentShown ? "left-0" : "left-[-100%]"
               } w-60 z-2 md:w-fit md:static md:border-none md:h-fit md:transition-none bg-[var(--bg-primary)] transition-all duration-200`}
             >
@@ -71,13 +75,22 @@ export default function Header() {
               </button>
               <ul className="flex flex-col gap-3 pt-12 items-center md:pt-0 md:flex-row text-[var(--text-primary)]">
                 <li>
-                  <a href="#">{txt.nav.about}</a>
+                  <button className="nav-link relative py-0.5 px-1 cursor-pointer">
+                    {txt.nav.about}
+                  </button>
                 </li>
                 <li>
-                  <a href="#">{txt.nav.projects}</a>
+                  <button className="nav-link relative py-0.5 px-1 cursor-pointer">
+                    {txt.nav.projects}
+                  </button>
                 </li>
                 <li>
-                  <a href="#">{txt.nav.contactMe}</a>
+                  <button
+                    className="nav-link relative py-0.5 px-1 cursor-pointer"
+                    onClick={scrollToFooter}
+                  >
+                    {txt.nav.contactMe}
+                  </button>
                 </li>
               </ul>
             </div>

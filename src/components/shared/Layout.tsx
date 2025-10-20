@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { LanguageProvider } from "./LanguageContext";
 import { ThemeProvider } from "./ThemeContext";
 import Header from "../Header";
@@ -9,15 +9,20 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const footerRef = useRef<HTMLElement>(null);
+
+  const scrollToFooter = () =>
+    footerRef.current?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <LanguageProvider>
       <ThemeProvider>
         <>
-          <Header />
+          <Header scrollToFooter={scrollToFooter} />
           <main>
             <div>{children}</div>
           </main>
-          <Footer />
+          <Footer ref={footerRef} />
         </>
       </ThemeProvider>
     </LanguageProvider>
