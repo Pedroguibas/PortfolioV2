@@ -54,7 +54,7 @@ export default function Technologies() {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 1,
+    threshold: 0.7,
   });
 
   return (
