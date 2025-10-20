@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import { useLanguage } from "./shared/LanguageContext";
 import "../assets/css/tech.css";
 import techJson from "../assets/data/technologies.json";
@@ -39,38 +40,56 @@ export default function Technologies() {
   const handleClick = (icon: string, name: string) => {
     setClickedTech(name);
     setCurrentClickecIcon(icon);
-  }
+  };
 
   const handleMouseEnter = (icon: string, name: string) => {
     setHoveredTech(name);
     setCurrentHoveredIcon(icon);
-  }
+  };
 
   const handleMouseLeave = () => {
     setHoveredTech("");
     setCurrentHoveredIcon("");
-  }
+  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 1,
+  });
 
   return (
     <section className="technologiesSection relative z-1 flex flex-col items-center py-16 text-[var(--text-primary)]">
       <h1 className="techTitle text-4xl">{txt.tech.title}</h1>
-      <span className={`techName mt-12 mb-2 text-[var(--tech-icon-color)] ${currentHoveredIcon == "" ? currentClickedIcon : currentHoveredIcon}`}>
-        {hoveredTech != "" ? hoveredTech : clickedTech}
-      </span>
-      <div className="techBtnContainer grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 mt-8">
-        {techJson.map((tech, i) => (
-          <button
-            key={i}
-            className={`${clickedTech == tech.name ? "clicked" : ""} techBtn ${
-              tech.icon
-            } bg-[var(--bg-primary)] p-2 border-2 rounded-lg border-[var(--tech-icon-color)] cursor-pointer transition-all duration-150`}
-            onMouseEnter={() => handleMouseEnter(tech.icon, tech.name)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(tech.icon, tech.name)}
-          >
-            <TechIcon icon={tech.icon} />
-          </button>
-        ))}
+      <div
+        ref={ref}
+        className={`flex flex-col items-center ${
+          inView ? "scroll-in" : "invisible"
+        }`}
+      >
+        <span
+          className={`techName mt-12 mb-2 text-[var(--tech-icon-color)] ${
+            currentHoveredIcon == "" ? currentClickedIcon : currentHoveredIcon
+          }`}
+        >
+          {hoveredTech != "" ? hoveredTech : clickedTech}
+        </span>
+        <div className="techBtnContainer grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 mt-8">
+          {techJson.map((tech, i) => (
+            <button
+              key={i}
+              className={`${
+                clickedTech == tech.name ? "clicked" : ""
+              } techBtn ${
+                tech.icon
+              } bg-[var(--bg-primary)] p-2 border-2 rounded-lg border-[var(--tech-icon-color)] cursor-pointer transition-all duration-150`}
+              onMouseEnter={() => handleMouseEnter(tech.icon, tech.name)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => handleClick(tech.icon, tech.name)}
+            >
+              <TechIcon icon={tech.icon} />
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );
