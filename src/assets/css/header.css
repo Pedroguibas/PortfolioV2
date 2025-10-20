@@ -8,3 +8,18 @@ header::after {
   border-color: var(--text-primary);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid var(--highlight-primary);
+  transition: width ease-in-out 200ms;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width ease-in-out 200ms;
+}
