@@ -1,6 +1,6 @@
 import brand from "../assets/brand/brand_full_blue.png";
-import { useLanguage } from "./shared/LanguageContext";
-import { useTheme } from "./shared/ThemeContext";
+import { useLanguage } from "./shared/LanguageContext.tsx";
+import { useTheme } from "./shared/ThemeContext.tsx";
 import { useState } from "react";
 import {
   Translate,

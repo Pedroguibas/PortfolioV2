@@ -21,9 +21,9 @@ function App() {
       <Layout scrollToAbout={scrollToAbout} scrollToProjects={scrollToProjects}>
         <Hero />
         <SoftskillsScroller />
-        <About ref={aboutRef} />
+        <About sectionRef={aboutRef} />
         <Technologies />
-        <Projects ref={projectsRef} />
+        <Projects sectionRef={projectsRef} />
       </Layout>
     </>
   );

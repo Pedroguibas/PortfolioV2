@@ -10,7 +10,7 @@ root * {
   --bg-secondary: hsl(0, 0%, 85%);
   --bg-tertiary: hsl(0, 0%, 75%);
   --text-primary: hsl(0, 0%, 0%);
-  --text-secondary: hsl(0, 0%, 15%);
+  --text-secondary: hsl(0, 0%, 25%);
 
   --highlight-primary: hsl(194, 100%, 40%);
   --highlight-secondary: hsl(276, 100%, 67%);
@@ -20,7 +20,7 @@ root * {
     --bg-secondary: hsl(0, 0%, 18%);
     --bg-tertiary: hsl(0, 0%, 23%);
     --text-primary: hsl(0, 0%, 100%);
-    --text-secondary: hsl(0, 0%, 85%);
+    --text-secondary: hsl(0, 0%, 70%);
   }
 
   background: var(--bg-primary);
@@ -41,4 +41,10 @@ root * {
   animation-name: scroll-in;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+}
+
+.sectionTitle {
+  font-family: Bebas Neue, sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.111111;
 }

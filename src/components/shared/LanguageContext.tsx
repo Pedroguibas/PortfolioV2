@@ -1,6 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import text from "../../assets/data/text.json";
-import React from "react";
 
 type Language = "pt" | "en";
 type TextJSON = (typeof text)[Language];

@@ -1,17 +1,17 @@
 import white_brand from "../assets/brand/brand_full_white.png";
 import black_brand from "../assets/brand/brand_full_black.png";
-import { useLanguage } from "./shared/LanguageContext";
-import { useTheme } from "./shared/ThemeContext";
+import { useLanguage } from "./shared/LanguageContext.tsx";
+import { useTheme } from "./shared/ThemeContext.tsx";
 import { Envelope, Whatsapp, Github, Linkedin } from "react-bootstrap-icons";
 
 interface FooterProps {
-  ref: React.RefObject<HTMLElement | null>;
+  sectionRef: React.RefObject<HTMLElement | null>;
   scrollToAbout: () => void;
   scrollToProjects: () => void;
 }
 
 export default function Footer({
-  ref,
+  sectionRef,
   scrollToAbout,
   scrollToProjects,
 }: FooterProps) {
@@ -23,7 +23,10 @@ export default function Footer({
   };
 
   return (
-    <footer ref={ref} className="bg-[var(--bg-secondary)] grid grid-cols-12">
+    <footer
+      ref={sectionRef}
+      className="bg-[var(--bg-secondary)] grid grid-cols-12"
+    >
       <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
         <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:mb-8">
           <img
