@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { LanguageProvider } from "./LanguageContext";
-import { ThemeProvider } from "./ThemeContext";
-import Header from "../Header";
-import Footer from "../Footer";
+import { LanguageProvider } from "./LanguageContext.tsx";
+import { ThemeProvider } from "./ThemeContext.tsx";
+import Header from "../Header.tsx";
+import Footer from "../Footer.tsx";
 
 interface LayoutProps {
   scrollToAbout: () => void;
@@ -33,7 +33,7 @@ export default function Layout({
             <div>{children}</div>
           </main>
           <Footer
-            ref={footerRef}
+            sectionRef={footerRef}
             scrollToAbout={scrollToAbout}
             scrollToProjects={scrollToProjects}
           />

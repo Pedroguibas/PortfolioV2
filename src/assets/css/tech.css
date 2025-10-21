@@ -62,10 +62,6 @@
   );
 }
 
-.technologiesSection .techTitle {
-  font-family: Bebas Neue, sans-serif;
-}
-
 @media (width < 48rem) {
   .technologiesSection::after,
   .technologiesSection::before {
@@ -126,7 +122,7 @@
 }
 
 .techBtn,
-.techName {  
+.techName {
   &.html {
     --tech-icon-light: hsl(13, 90%, 65%);
     --tech-icon-color: hsl(13, 77%, 52%);

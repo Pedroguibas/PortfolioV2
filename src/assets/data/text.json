@@ -18,6 +18,17 @@
       "Organização",
       "Proatividade"
     ],
+    "about": {
+      "paragraph": {
+        "part1": "Estudante de Desenvolvimento de Software na FATEC Marília, constantemente trabalhando em projetos e soluções que unem funcionalidade e design. Focado em entregar experiências ",
+        "intuitive": "intuitivas",
+        "and": " e ",
+        "visually": "visualmente atraentes",
+        "part2": " que atendam as necessidades do usuário e aos objetivos do projeto, fazendo o melhor uso de ",
+        "design": "design digital",
+        "part3": ". Sempre aprendendo e aberto a novos desafios, pronto para contribuir com inovação e qualidade em cada etapa do processo."
+      }
+    },
     "titles": {
       "about": "Sobre",
       "tech": "Tecnologias",
@@ -44,6 +55,17 @@
       "Organization",
       "Proactivity"
     ],
+    "about": {
+      "paragraph": {
+        "part1": "Software Development student at FATEC Marília, constantly working on projects and solutions that combine functionality and design. Focused on delivering ",
+        "intuitive": "intuitive",
+        "and": " and ",
+        "visually": "visually appealing",
+        "part2": " experiences that meet both user needs and project goals, while making the best use of ",
+        "design": "digital design",
+        "part3": ". Always learning and open to new challenges, ready to contribute with innovation and quality at every stage of the process."
+      }
+    },
     "titles": {
       "about": "About",
       "tech": "Technologies",

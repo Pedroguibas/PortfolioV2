@@ -1,4 +1,4 @@
-import { useLanguage } from "./shared/LanguageContext";
+import { useLanguage } from "./shared/LanguageContext.tsx";
 import { useState, useEffect, useRef } from "react";
 import "../assets/css/softskillsScroller.css";
 
@@ -38,11 +38,9 @@ export function SoftsKillsList() {
       </ul>
 
       <ul className="softskillsList flex text-2xl pt-1 pb-0.5 w-max">
-        {Array.from({ length: Math.max(itemsRepeatCount, 0) }).map(
-          (_, i) => (
-            <SoftskillsListItems key={i} />
-          )
-        )}
+        {Array.from({ length: Math.max(itemsRepeatCount, 0) }).map((_, i) => (
+          <SoftskillsListItems key={i} />
+        ))}
       </ul>
     </>
   );

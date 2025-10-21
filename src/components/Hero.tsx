@@ -1,7 +1,7 @@
 import pfp from "../assets/profile-pic.jpeg";
 import "../assets/css/hero.css";
 import { Github, Linkedin, Envelope } from "react-bootstrap-icons";
-import { useLanguage } from "./shared/LanguageContext";
+import { useLanguage } from "./shared/LanguageContext.tsx";
 
 export default function Hero() {
   const { txt } = useLanguage();
@@ -23,7 +23,9 @@ export default function Hero() {
           <p className="occupation profileHighlight text-[var(--highlight-secondary)] mt-1">
             {txt.hero.occupation}
           </p>
-          <p className="introduction text-sm">{txt.hero.introduction}</p>
+          <p className="text-[var(--text-secondary)] introduction text-sm">
+            {txt.hero.introduction}
+          </p>
         </div>
         <div className="profileImageDiv flex justify-center md:justify-end items-center">
           <div className="profileImage rounded-full overflow-hidden lg:me-16">

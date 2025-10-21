@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { useLanguage } from "./shared/LanguageContext";
+import { useLanguage } from "./shared/LanguageContext.tsx";
 import "../assets/css/tech.css";
 import techJson from "../assets/data/technologies.json";
 
@@ -54,12 +54,12 @@ export default function Technologies() {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.7,
+    threshold: 0.4,
   });
 
   return (
-    <section className="technologiesSection relative z-1 flex flex-col items-center py-16 text-[var(--text-primary)]">
-      <h1 className="techTitle text-4xl">{txt.titles.tech}</h1>
+    <section className="technologiesSection relative z-1 flex flex-col items-center py-16 text-[var(--text-primary)] mt-20">
+      <h1 className="sectionTitle">{txt.titles.tech}</h1>
       <div
         ref={ref}
         className={`flex flex-col items-center ${
