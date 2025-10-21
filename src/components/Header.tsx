@@ -92,7 +92,7 @@ export default function Header({
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
                     onClick={scrollToAbout}
                   >
-                    {txt.nav.about}
+                    {txt.titles.about}
                   </button>
                 </li>
                 <li>
@@ -100,7 +100,7 @@ export default function Header({
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
                     onClick={scrollToProjects}
                   >
-                    {txt.nav.projects}
+                    {txt.titles.projects}
                   </button>
                 </li>
                 <li>
@@ -108,7 +108,7 @@ export default function Header({
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
                     onClick={scrollToFooter}
                   >
-                    {txt.nav.contactMe}
+                    {txt.titles.contactMe}
                   </button>
                 </li>
               </ul>

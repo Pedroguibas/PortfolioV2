@@ -59,7 +59,7 @@ export default function Technologies() {
 
   return (
     <section className="technologiesSection relative z-1 flex flex-col items-center py-16 text-[var(--text-primary)]">
-      <h1 className="techTitle text-4xl">{txt.tech.title}</h1>
+      <h1 className="techTitle text-4xl">{txt.titles.tech}</h1>
       <div
         ref={ref}
         className={`flex flex-col items-center ${

@@ -32,7 +32,11 @@ export default function Layout({
           <main>
             <div>{children}</div>
           </main>
-          <Footer ref={footerRef} />
+          <Footer
+            ref={footerRef}
+            scrollToAbout={scrollToAbout}
+            scrollToProjects={scrollToProjects}
+          />
         </>
       </ThemeProvider>
     </LanguageProvider>

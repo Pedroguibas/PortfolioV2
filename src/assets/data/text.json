@@ -1,10 +1,7 @@
 {
   "pt": {
     "nav": {
-      "translate": "English",
-      "about": "Sobre",
-      "projects": "Projetos",
-      "contactMe": "Contatos"
+      "translate": "English"
     },
     "hero": {
       "greeting": "👋 Olá! Sou",
@@ -21,20 +18,16 @@
       "Organização",
       "Proatividade"
     ],
-    "tech": {
-      "title": "Tecnologias"
-    },
-    "footer": {
-      "quickLinks": "Links rápidos",
+    "titles": {
+      "about": "Sobre",
+      "tech": "Tecnologias",
+      "projects": "Projetos",
       "contactMe": "Contatos"
     }
   },
   "en": {
     "nav": {
-      "translate": "Português",
-      "about": "About",
-      "projects": "Projects",
-      "contactMe": "Contact-me"
+      "translate": "Português"
     },
     "hero": {
       "greeting": "👋 Hello! I'm",
@@ -51,10 +44,10 @@
       "Organization",
       "Proactivity"
     ],
-    "tech": {
-      "title": "Technologies"
-    },
-    "footer": {
+    "titles": {
+      "about": "About",
+      "tech": "Technologies",
+      "projects": "Projects",
       "contactMe": "Contact me"
     }
   }

@@ -6,9 +6,15 @@ import { Envelope, Whatsapp, Github, Linkedin } from "react-bootstrap-icons";
 
 interface FooterProps {
   ref: React.RefObject<HTMLElement | null>;
+  scrollToAbout: () => void;
+  scrollToProjects: () => void;
 }
 
-export default function Footer({ ref } : FooterProps) {
+export default function Footer({
+  ref,
+  scrollToAbout,
+  scrollToProjects,
+}: FooterProps) {
   const { txt } = useLanguage();
   const { theme } = useTheme();
 
@@ -34,13 +40,15 @@ export default function Footer({ ref } : FooterProps) {
               </h2>
               <ul className="flex flex-col gap-2">
                 <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                  <a href="#">{txt.nav.about}</a>
+                  <button onClick={scrollToAbout}>{txt.titles.about}</button>
                 </li>
                 <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                  <a href="#">{txt.nav.projects}</a>
+                  <button onClick={scrollToProjects}>
+                    {txt.titles.projects}
+                  </button>
                 </li>
                 <li className="hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
-                  <a href="#">{txt.nav.contactMe}</a>
+                  <button>{txt.titles.contactMe}</button>
                 </li>
               </ul>
             </div>
@@ -48,7 +56,7 @@ export default function Footer({ ref } : FooterProps) {
           <div className="footer-contacts flex flex-col mt-8 text-xs sm:text-sm text-[var(--text-secondary)] md:m-0 md:text-md md:items-center">
             <div className="flex flex-col">
               <h2 className="text-[var(--text-primary)] font-bold text-base md:text-xl mb-4">
-                {txt.footer.contactMe}
+                {txt.titles.contactMe}
               </h2>
               <ul className="flex flex-col gap-2">
                 <li className="flex gap-2 items-center hover:translate-y-[-1px] hover:text-[var(--text-primary)] transition-all duration-150">
@@ -95,9 +103,7 @@ export default function Footer({ ref } : FooterProps) {
                   </button>
                   <button
                     onClick={() =>
-                      handleRedirect(
-                        "mailto:pedroguibas123@gmail.com"
-                      )
+                      handleRedirect("mailto:pedroguibas123@gmail.com")
                     }
                     className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
                   >

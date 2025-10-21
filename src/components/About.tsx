@@ -5,5 +5,9 @@ interface AboutProps {
 }
 
 export default function About({ ref }: AboutProps) {
-  return <section ref={ref} className="aboutSection"></section>;
+  return (
+    <section ref={ref} className="aboutSection">
+      <h1></h1>
+    </section>
+  );
 }
