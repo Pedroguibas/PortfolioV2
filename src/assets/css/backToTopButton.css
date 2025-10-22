@@ -1,0 +1,9 @@
+.backToTopButtonText {
+  display: none;
+}
+
+@media (width >= 48rem) {
+  .backToTopButtonText {
+    display: block;
+  }
+}
