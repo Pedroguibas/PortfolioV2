@@ -27,7 +27,7 @@ export default function BackToTopButton() {
     <button
       className={`backToTopButton fixed flex justify-center items-center w-fit p-1 md:px-2 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] ${
         active ? "bottom-12" : "bottom-[-3rem]"
-      } left-1/2 right-1/2 translate-x-[-50%] z-5 hover:border hover:border-[var(--text-primary)] hover:bg-[var(--bg-primary)] hover:text-[var(--text-primary)] transition-all duration-200 cursor-pointer`}
+      } left-1/2 right-1/2 translate-x-[-50%] z-5 border border-transparent hover:border-[var(--text-primary)] hover:bg-[var(--bg-primary)] hover:text-[var(--text-primary)] transition-all duration-200 cursor-pointer`}
       onClick={handleClick}
     >
       <ArrowUpShort className="text-2xl" />
