@@ -34,7 +34,8 @@
       "tech": "Tecnologias",
       "projects": "Projetos",
       "contactMe": "Contatos"
-    }
+    },
+    "backToTopBtnText": "Voltar ao topo"
   },
   "en": {
     "nav": {
@@ -71,6 +72,7 @@
       "tech": "Technologies",
       "projects": "Projects",
       "contactMe": "Contact me"
-    }
+    },
+    "backToTopBtnText": "Back to top"
   }
 }
