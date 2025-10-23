@@ -27,15 +27,18 @@ export function ScrollDirectionProvider({
     useState<ScrollDirectionType>("down");
 
   useEffect(() => {
-    const handleScroll = () => {
+    if (currentScrollPosition > lastScrollPosition)
+      setLastScrollDirection("down");
+    else if (currentScrollPosition < lastScrollPosition)
+      setLastScrollDirection("up");
+
+    if (Math.abs(currentScrollPosition - lastScrollPosition) > 150)
       setLastScrollPosition(currentScrollPosition);
+  }, [currentScrollPosition]);
+
+  useEffect(() => {
+    const handleScroll = () => {
       setCurrentScrollPosition(window.scrollY);
-
-      if (currentScrollPosition > lastScrollPosition)
-        setLastScrollDirection("down");
-      else setLastScrollDirection("up");
-
-      console.log(lastScrollDirection);
     };
 
     window.addEventListener("scroll", handleScroll);
