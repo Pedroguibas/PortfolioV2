@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { LanguageProvider } from "./LanguageContext.tsx";
 import { ThemeProvider } from "./ThemeContext.tsx";
+import { ScrollDirectionProvider } from "./ScrollDirectionContext.tsx";
 import Header from "../Header.tsx";
 import Footer from "../Footer.tsx";
 import BackToTopButton from "../BackToTopButton.tsx";
@@ -24,22 +25,24 @@ export default function Layout({
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <>
-          <Header
-            scrollToFooter={scrollToFooter}
-            scrollToAbout={scrollToAbout}
-            scrollToProjects={scrollToProjects}
-          />
-          <main>
-            <div>{children}</div>
-          </main>
-          <Footer
-            sectionRef={footerRef}
-            scrollToAbout={scrollToAbout}
-            scrollToProjects={scrollToProjects}
-          />
-          <BackToTopButton />
-        </>
+        <ScrollDirectionProvider>
+          <>
+            <Header
+              scrollToFooter={scrollToFooter}
+              scrollToAbout={scrollToAbout}
+              scrollToProjects={scrollToProjects}
+            />
+            <main>
+              <div>{children}</div>
+            </main>
+            <Footer
+              sectionRef={footerRef}
+              scrollToAbout={scrollToAbout}
+              scrollToProjects={scrollToProjects}
+            />
+            <BackToTopButton />
+          </>
+        </ScrollDirectionProvider>
       </ThemeProvider>
     </LanguageProvider>
   );
