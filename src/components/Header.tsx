@@ -39,7 +39,7 @@ export default function Header({
     if (isNavbarSupportedContentShown) setIsNavbarSupportedContentShown(false);
     else setIsNavbarSupportedContentShown(true);
   };
-  const { lastScrollDirection } = useScrollDirection();
+  const { lastScrollDirection, currentScrollPosition } = useScrollDirection();
 
   const [active, setActive] = useState(false);
 
@@ -49,11 +49,15 @@ export default function Header({
     if (width >= 768) {
       setActive(true);
     } else {
-      if (lastScrollDirection == "down" && !isNavbarSupportedContentShown)
+      if (
+        lastScrollDirection == "down" &&
+        !isNavbarSupportedContentShown &&
+        currentScrollPosition > 300
+      )
         setActive(false);
       else setActive(true);
     }
-  }, [lastScrollDirection]);
+  }, [currentScrollPosition]);
 
   return (
     <>
