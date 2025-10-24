@@ -1,7 +1,8 @@
 import brand from "../assets/brand/brand_full_blue.png";
 import { useLanguage } from "./shared/LanguageContext.tsx";
 import { useTheme } from "./shared/ThemeContext.tsx";
-import { useState } from "react";
+import { useScrollDirection } from "./shared/ScrollDirectionContext.tsx";
+import { useState, useEffect } from "react";
 import {
   Translate,
   SunFill,
@@ -38,10 +39,28 @@ export default function Header({
     if (isNavbarSupportedContentShown) setIsNavbarSupportedContentShown(false);
     else setIsNavbarSupportedContentShown(true);
   };
+  const { lastScrollDirection } = useScrollDirection();
+
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const { innerWidth: width } = window;
+
+    if (width >= 768) {
+      setActive(true);
+    } else {
+      if (lastScrollDirection == "up") setActive(true);
+      else setActive(false);
+    }
+  }, [lastScrollDirection]);
 
   return (
     <>
-      <header className="grid grid-cols-12 sticky top-0 py-2 bg-[var(--bg-primary)] z-10">
+      <header
+        className={`grid grid-cols-12 sticky ${
+          active ? "top-0" : "top-[-120%]"
+        } py-2 bg-[var(--bg-primary)] z-10 transition-all duration-300`}
+      >
         <nav className="grid grid-cols-12 col-span-10 col-start-2 items-center">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
