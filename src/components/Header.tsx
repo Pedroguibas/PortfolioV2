@@ -49,8 +49,9 @@ export default function Header({
     if (width >= 768) {
       setActive(true);
     } else {
-      if (lastScrollDirection == "up") setActive(true);
-      else setActive(false);
+      if (lastScrollDirection == "down" && !isNavbarSupportedContentShown)
+        setActive(false);
+      else setActive(true);
     }
   }, [lastScrollDirection]);
 
