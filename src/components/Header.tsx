@@ -63,7 +63,7 @@ export default function Header({
     <>
       <header
         className={`grid grid-cols-12 sticky ${
-          active ? "top-0" : "top-[-120%]"
+          active ? "top-0" : "top-[-10%]"
         } py-2 bg-[var(--bg-primary)] z-10 transition-all duration-300`}
       >
         <nav className="grid grid-cols-12 col-span-10 col-start-2 items-center">

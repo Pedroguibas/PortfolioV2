@@ -32,7 +32,7 @@ export function ScrollDirectionProvider({
     else if (currentScrollPosition < lastScrollPosition)
       setLastScrollDirection("up");
 
-    if (Math.abs(currentScrollPosition - lastScrollPosition) > 150)
+    if (Math.abs(currentScrollPosition - lastScrollPosition) > 100)
       setLastScrollPosition(currentScrollPosition);
   }, [currentScrollPosition]);
 
