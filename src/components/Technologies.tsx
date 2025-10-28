@@ -11,9 +11,13 @@ const icons = import.meta.glob("../assets/technologies/*.svg", {
 
 interface TechIconsProps {
   icon: string;
+  classes?: string;
 }
 
-export const TechIcon: React.FC<TechIconsProps> = ({ icon }) => {
+export const TechIcon: React.FC<TechIconsProps> = ({
+  icon,
+  classes = "w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16",
+}) => {
   const IconModule = icons[`../assets/technologies/${icon}.svg`] as {
     default: React.FC<React.SVGProps<SVGSVGElement>>;
   };
@@ -21,12 +25,7 @@ export const TechIcon: React.FC<TechIconsProps> = ({ icon }) => {
 
   if (!Icon) return <p style={{ color: "red" }}>Icon {icon} not found.</p>;
 
-  return (
-    <Icon
-      className={`techIcon w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 ${icon}`}
-      fill="currentColor"
-    />
-  );
+  return <Icon className={`techIcon ${classes} ${icon}`} fill="currentColor" />;
 };
 
 export default function Technologies() {

@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
 import text from "../../assets/data/text.json";
 
-type Language = "pt" | "en";
+export type Language = "pt" | "en";
 type TextJSON = (typeof text)[Language];
 
 type LanguageContextType = {
-  language: string;
+  language: Language;
   setLanguage: React.Dispatch<React.SetStateAction<Language>>;
   txt: TextJSON;
 };

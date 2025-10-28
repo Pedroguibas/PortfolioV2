@@ -1,0 +1,28 @@
+[
+  {
+    "projectTexts": {
+      "pt": {
+        "projectTitle": "Este Portfólio",
+        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit. Phasellus rhoncus urna orci, in pretium sapien pharetra sed. Praesent faucibus nibh id augue tempus accumsan. Phasellus cursus elit eu sapien volutpat laoreet. Aenean vulputate nunc dolor, in vulputate leo sollicitudin sed. Suspendisse potenti. Morbi venenatis tincidunt magna."
+      },
+      "en": {
+        "projectTitle": "This Portfolio",
+        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit. Phasellus rhoncus urna orci, in pretium sapien pharetra sed. Praesent faucibus nibh id augue tempus accumsan. Phasellus cursus elit eu sapien volutpat laoreet. Aenean vulputate nunc dolor, in vulputate leo sollicitudin sed. Suspendisse potenti. Morbi venenatis tincidunt magna."
+      }
+    },
+    "projectTechList": ["html", "css", "js"]
+  },
+  {
+    "projectTexts": {
+      "pt": {
+        "projectTitle": "Disc-ing",
+        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit. Phasellus rhoncus urna orci, in pretium sapien pharetra sed. Praesent faucibus nibh id augue tempus accumsan. Phasellus cursus elit eu sapien volutpat laoreet. Aenean vulputate nunc dolor, in vulputate leo sollicitudin sed. Suspendisse potenti. Morbi venenatis tincidunt magna."
+      },
+      "en": {
+        "projectTitle": "Disc-ing",
+        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit. Phasellus rhoncus urna orci, in pretium sapien pharetra sed. Praesent faucibus nibh id augue tempus accumsan. Phasellus cursus elit eu sapien volutpat laoreet. Aenean vulputate nunc dolor, in vulputate leo sollicitudin sed. Suspendisse potenti. Morbi venenatis tincidunt magna."
+      }
+    },
+    "projectTechList": ["html", "css", "js"]
+  }
+]

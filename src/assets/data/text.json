@@ -35,7 +35,8 @@
       "projects": "Projetos",
       "contactMe": "Contatos"
     },
-    "backToTopBtnText": "Voltar ao topo"
+    "backToTopBtnText": "Voltar ao topo",
+    "checkProject": "Confira no GitHub"
   },
   "en": {
     "nav": {
@@ -73,6 +74,7 @@
       "projects": "Projects",
       "contactMe": "Contact me"
     },
-    "backToTopBtnText": "Back to top"
+    "backToTopBtnText": "Back to top",
+    "checkProject": "Check it on GitHub"
   }
 }

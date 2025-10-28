@@ -25,7 +25,7 @@ export default function Footer({
   return (
     <footer
       ref={sectionRef}
-      className="bg-[var(--bg-secondary)] grid grid-cols-12"
+      className="bg-[var(--bg-secondary)] grid grid-cols-12 mt-16"
     >
       <section className="footerSection col-span-10 col-start-2 grid grid-cols-1 items-center md:grid-cols-3 py-8 border-b border-[var(--text-primary)]">
         <div className="footer-brand flex flex-col items-center mt-8 mb-4 md:mb-8">
