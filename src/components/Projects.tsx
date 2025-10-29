@@ -27,7 +27,7 @@ function Project({ p_txt }: ProjectProps) {
       <span className="redirectIcon flex justify-center items-center absolute top-2 right-2 p-2 rounded-full bg-[var(--highlight-secondary)] text-white w-fit z-2">
         <BoxArrowUpRight />
       </span>
-      <article className="bg-[var(--bg-secondary)] rounded-[inherit]">
+      <article className="bg-[var(--bg-secondary)] h-full rounded-[inherit]">
         <aside className="overflow-hidden rounded-t-2xl h-48">
           <img
             className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 ease-in-out"

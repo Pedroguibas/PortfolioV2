@@ -48,5 +48,5 @@
 .projectCard:hover::after {
   opacity: 0.9;
   transition: opacity 400ms;
-  animation: rotateGradient 5s linear infinite;
+  animation: rotateGradient 2.5s linear infinite;
 }
