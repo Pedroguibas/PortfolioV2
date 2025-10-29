@@ -3,6 +3,7 @@ import { BoxArrowUpRight } from "react-bootstrap-icons";
 import { useLanguage } from "./shared/LanguageContext.tsx";
 import projects from "../assets/data/projects.json";
 import testImg from "../assets/projects/portfolio.png";
+import "../assets/css/projects.css";
 
 interface ProjectsProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -15,15 +16,19 @@ interface ProjectProps {
 }
 
 function Project({ p_txt }: ProjectProps) {
-  const { txt, language } = useLanguage();
+  const { language } = useLanguage();
   return (
-    <button className="flex flex-col text-start relative bg-[var(--bg-secondary)] border border-[var(--text-primary)] overflow-hidden rounded-2xl">
-      <span className="redirectIcon flex justify-center items-center absolute top-2 right-2 p-2 rounded-full bg-[var(--highlight-secondary)] text-white w-fit">
+    <button className="projectCard flex flex-col group text-start relative border-2 rounded-2xl transition-all duration-500 ease-in-out cursor-pointer">
+      <span className="redirectIcon flex justify-center items-center absolute top-2 right-2 p-2 rounded-full bg-[var(--highlight-secondary)] text-white w-fit z-2">
         <BoxArrowUpRight />
       </span>
-      <article>
-        <aside className="overflow-hidden h-48">
-          <img className="object-cover w-full h-full" src={testImg} alt="" />
+      <article className="bg-[var(--bg-secondary)] rounded-[inherit]">
+        <aside className="overflow-hidden rounded-t-2xl h-48">
+          <img
+            className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 ease-in-out"
+            src={testImg}
+            alt=""
+          />
         </aside>
         <div className="flex flex-col justify-start py-2 px-4">
           <h2 className="text-2xl mt-1">

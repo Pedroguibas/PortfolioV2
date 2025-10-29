@@ -1,0 +1,52 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateGradient {
+  from {
+    --gradient-angle: 0deg;
+  }
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+.projectCard {
+  position: relative;
+  border-color: transparent;
+  z-index: 1;
+}
+
+.projectCard::before,
+.projectCard::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    var(--gradient-angle),
+    var(--highlight-primary),
+    var(--highlight-secondary)
+  );
+  border-radius: inherit;
+}
+
+.projectCard::before {
+  inset: -3px;
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 400ms;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectCard:hover::before,
+.projectCard:hover::after {
+  opacity: 0.9;
+  transition: opacity 400ms;
+  animation: rotateGradient 5s linear infinite;
+}
