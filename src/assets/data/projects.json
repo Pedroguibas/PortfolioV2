@@ -10,7 +10,8 @@
         "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
       }
     },
-    "projectTechList": ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind"]
+    "projectTechList": ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind"],
+    "image": "portfolio"
   },
   {
     "projectTexts": {
@@ -23,6 +24,7 @@
         "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
       }
     },
-    "projectTechList": ["HTML", "CSS", "JavaScript"]
+    "projectTechList": ["HTML", "CSS", "JavaScript"],
+    "image": "disc-ing"
   }
 ]

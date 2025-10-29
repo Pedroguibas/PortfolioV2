@@ -34,9 +34,9 @@
 }
 
 .projectCard::before {
-  inset: -3px;
+  inset: 3px;
   opacity: 0;
-  filter: blur(12px);
+  filter: blur(20px);
   transition: opacity 400ms;
 }
 
