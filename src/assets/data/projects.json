@@ -3,28 +3,45 @@
     "projectTexts": {
       "pt": {
         "projectTitle": "Este Portfólio",
-        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
+        "projectDiscription": "Portfólio para expor projetos, habilidades e experiências em programação, demonstrando competências técnicas e criativas na construção de aplicações e interfaces digitais."
       },
       "en": {
         "projectTitle": "This Portfolio",
-        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
+        "projectDiscription": "Portfolio showcasing projects, ability and programming experiences, demonstrating technical and creative skills in developing applications and digital interfaces"
       }
     },
-    "projectTechList": ["HTML", "CSS", "JavaScript", "React", "Vite", "Tailwind"],
-    "image": "portfolio"
+    "projectTechList": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vite",
+      "Tailwind"
+    ],
+    "image": "portfolio",
+    "source": "https://github.com/Pedroguibas/PortfolioV2"
   },
   {
     "projectTexts": {
       "pt": {
         "projectTitle": "Disc-ing",
-        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
+        "projectDiscription": "Plataforma de avaliação de jogos que reúne análises de especialistas e opiniões da comunidade, oferecendo notas, críticas e rankings atualizados para ajudar jogadores a descobrir os melhores títulos."
       },
       "en": {
         "projectTitle": "Disc-ing",
-        "projectDiscription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet sagittis nunc, sit amet fringilla ex consequat quis. Pellentesque quis vulputate velit."
+        "projectDiscription": "A game review platform that gathers critic analyses and community opinions, providing ratings, reviews, and updated rankings to help players discover the best games."
       }
     },
-    "projectTechList": ["HTML", "CSS", "JavaScript"],
-    "image": "disc-ing"
+    "projectTechList": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "JQuerry",
+      "PHP",
+      "SQL",
+      "Bootstrap"
+    ],
+    "image": "disc-ing",
+    "source": "https://github.com/Pedroguibas/Disc-ing"
   }
 ]
