@@ -17,8 +17,8 @@ root * {
 
   &.dark {
     --bg-primary: hsl(0, 0%, 8%);
-    --bg-secondary: hsl(0, 0%, 18%);
-    --bg-tertiary: hsl(0, 0%, 23%);
+    --bg-secondary: hsl(0, 0%, 15%);
+    --bg-tertiary: hsl(0, 0%, 20%);
     --text-primary: hsl(0, 0%, 100%);
     --text-secondary: hsl(0, 0%, 70%);
   }

@@ -82,7 +82,7 @@ export default function Footer({
                     +55 (14) 99616-0391
                   </button>
                 </li>
-                <li className="links flex justify-center gap-1 sm:gap-2 md:gap-4 text-base sm:text-lg md:text-xl mt-2 pt-4 border-t-1">
+                <li className="links flex justify-center gap-1 sm:gap-2 md:gap-4 text-base text-[var(--text-primary)] sm:text-lg md:text-xl mt-2 pt-4 border-t-1">
                   <button className="cvBtn text-[var(--highlight-secondary)] border py-0.5 px-2 rounded-lg transition-all duration-250 cursor-pointer">
                     {txt.hero.cv}
                   </button>
