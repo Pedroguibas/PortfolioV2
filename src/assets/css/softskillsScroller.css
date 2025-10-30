@@ -1,6 +1,6 @@
 @keyframes infiniteScroll {
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - var(--softskills-scroller-gap)));
   }
 }
 
