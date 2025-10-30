@@ -27,7 +27,10 @@ export function SoftsKillsList() {
     if (ref.current) {
       const comp_w = ref.current.offsetWidth;
 
-      if (comp_w > 0) setItemsRepeatCount(Math.ceil(total_w / comp_w));
+      if (comp_w > 0)
+        setItemsRepeatCount(
+          Math.ceil(total_w / comp_w) >= 2 ? Math.ceil(total_w / comp_w) : 2
+        );
     }
   }, []);
 
