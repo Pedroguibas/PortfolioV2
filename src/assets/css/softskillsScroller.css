@@ -6,13 +6,14 @@
 
 .softskillsScroller .softskillsList {
   --softskills-scroller-gap: 4em;
+  --infinite-scroll-duration: 15s;
 
   gap: var(--softskills-scroller-gap);
   padding-left: var(--softskills-scroller-gap);
   animation-name: infiniteScroll;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 45s;
+  animation-duration: var(--infinite-scroll-duration);
   cursor: default;
 }
 
@@ -25,15 +26,19 @@
 }
 
 .softskillsScroller .softskillsList .softskillsItem::before {
-  content: "🞍";
+  content: "";
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: calc(var(--softskills-scroller-gap) / -2);
+  background: white;
+  width: 0.25em;
+  height: 0.25em;
 }
 
 @media (width > 48rem) {
   .softskillsScroller .softskillsList {
     --softskills-scroller-gap: 8em;
+    --infinite-scroll-duration: 20s;
   }
 }
