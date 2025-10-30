@@ -33,7 +33,10 @@ export function SoftsKillsList() {
 
   return (
     <>
-      <ul ref={ref} className="invisible h-0 pointer-none flex text-2xl w-max">
+      <ul
+        ref={ref}
+        className="invisible softskillsList h-0 pointer-none flex text-2xl w-max"
+      >
         <SoftskillsListItems />
       </ul>
 
