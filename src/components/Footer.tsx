@@ -2,7 +2,8 @@ import white_brand from "../assets/brand/brand_full_white.png";
 import black_brand from "../assets/brand/brand_full_black.png";
 import { useLanguage } from "./shared/LanguageContext.tsx";
 import { useTheme } from "./shared/ThemeContext.tsx";
-import { Envelope, Whatsapp, Github, Linkedin } from "react-bootstrap-icons";
+import { Envelope, Whatsapp } from "react-bootstrap-icons";
+import ContactLinks from "./ContactLinks.tsx";
 
 interface FooterProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -82,36 +83,8 @@ export default function Footer({
                     +55 (14) 99616-0391
                   </button>
                 </li>
-                <li className="links flex justify-center gap-1 sm:gap-2 md:gap-4 text-base text-[var(--text-primary)] sm:text-lg md:text-xl mt-2 pt-4 border-t-1">
-                  <button className="cvBtn text-[var(--highlight-secondary)] border py-0.5 px-2 rounded-lg transition-all duration-250 cursor-pointer">
-                    {txt.hero.cv}
-                  </button>
-                  <button
-                    onClick={() =>
-                      handleRedirect("https://github.com/Pedroguibas")
-                    }
-                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
-                  >
-                    <Github />
-                  </button>
-                  <button
-                    onClick={() =>
-                      handleRedirect(
-                        "https://www.linkedin.com/in/pedro-bastos-4275b2243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                      )
-                    }
-                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
-                  >
-                    <Linkedin />
-                  </button>
-                  <button
-                    onClick={() =>
-                      handleRedirect("mailto:pedroguibas123@gmail.com")
-                    }
-                    className="p-2 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--highlight-primary)] hover:translate-y-[-2px] transition-all duration-200 cursor-pointer"
-                  >
-                    <Envelope />
-                  </button>
+                <li>
+                  <ContactLinks className="gap-1 sm:gap-2 md:gap-4 text-base text-[var(--text-primary)] sm:text-lg md:text-xl mt-2 pt-4 border-t-1" />
                 </li>
               </ul>
             </div>
