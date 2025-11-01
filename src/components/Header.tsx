@@ -59,6 +59,11 @@ export default function Header({
     }
   }, [currentScrollPosition]);
 
+  const handleNavClick = (scrollFunc: () => void) => {
+    scrollFunc();
+    setIsNavbarSupportedContentShown(false);
+  };
+
   return (
     <>
       <header
@@ -114,7 +119,7 @@ export default function Header({
                 <li>
                   <button
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
-                    onClick={scrollToAbout}
+                    onClick={() => handleNavClick(scrollToAbout)}
                   >
                     {txt.titles.about}
                   </button>
@@ -122,7 +127,7 @@ export default function Header({
                 <li>
                   <button
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
-                    onClick={scrollToProjects}
+                    onClick={() => handleNavClick(scrollToProjects)}
                   >
                     {txt.titles.projects}
                   </button>
@@ -130,7 +135,7 @@ export default function Header({
                 <li>
                   <button
                     className="nav-link relative py-0.5 px-1 cursor-pointer"
-                    onClick={scrollToFooter}
+                    onClick={() => handleNavClick(scrollToFooter)}
                   >
                     {txt.titles.contactMe}
                   </button>
