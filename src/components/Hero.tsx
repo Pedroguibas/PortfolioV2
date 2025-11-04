@@ -25,7 +25,7 @@ export default function Hero() {
         </div>
         <div className="profileImageDiv flex justify-center md:justify-end items-center">
           <div className="profileImage rounded-full overflow-hidden lg:me-16">
-            <img src={pfp} alt="Profile picture" className="w-64" />
+            <img src={pfp} alt="Profile picture" className="aspect-square w-64" />
           </div>
         </div>
         <ContactLinks className="gap-3 sm:gap-4 text-lg md:text-xl md:col-span-2  mb-20 md:mt-20" />
