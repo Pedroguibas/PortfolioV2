@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jura:wght@300..700&display=swap");
 @import "tailwindcss";
-
-root * {
-  font-family: sans-serif;
-}
 
 #root {
   --bg-primary: hsl(0, 0%, 93%);
@@ -23,6 +19,7 @@ root * {
     --text-secondary: hsl(0, 0%, 70%);
   }
 
+  font-family: Jura, Arial, Helvetica, sans-serif;
   background: var(--bg-primary);
 }
 
