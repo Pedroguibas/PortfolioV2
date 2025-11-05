@@ -86,6 +86,7 @@
 .techName {
   font-family: Michroma;
   transform: scaleY(1.5);
+  filter: drop-shadow(0 0 5px var(--tech-icon-light));
 }
 
 .techBtnContainer {
@@ -116,11 +117,6 @@
     }
   }
 }
-
-.techName {
-  filter: drop-shadow(0 0 5px var(--tech-icon-light));
-}
-
 .techBtn,
 .techName {
   &.html {
@@ -187,5 +183,11 @@
     --tech-icon-light: hsl(204, 40%, 65%);
     --tech-icon-color: hsl(204, 32%, 48%);
     --tech-icon-dark: hsl(204, 32%, 35%);
+  }
+
+  &.python {
+    --tech-icon-light: hsl(207, 45%, 60%);
+    --tech-icon-color: hsl(207, 45%, 49%);
+    --tech-icon-dark: hsl(207, 45%, 35%);
   }
 }

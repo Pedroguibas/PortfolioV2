@@ -42,5 +42,9 @@
   {
     "icon": "java",
     "name": "Java"
+  },
+  {
+    "icon": "python",
+    "name": "Python"
   }
 ]
