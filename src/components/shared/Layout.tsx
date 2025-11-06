@@ -5,6 +5,7 @@ import { ScrollDirectionProvider } from "./ScrollDirectionContext.tsx";
 import Header from "../Header.tsx";
 import Footer from "../Footer.tsx";
 import BackToTopButton from "../BackToTopButton.tsx";
+import Cookie from "../Cookie.tsx";
 
 interface LayoutProps {
   scrollToAbout: () => void;
@@ -40,6 +41,7 @@ export default function Layout({
               scrollToAbout={scrollToAbout}
               scrollToProjects={scrollToProjects}
             />
+            <Cookie />
             <BackToTopButton />
           </>
         </ScrollDirectionProvider>
