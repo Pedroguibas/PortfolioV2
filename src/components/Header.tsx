@@ -23,9 +23,8 @@ export default function Header({
   scrollToAbout,
   scrollToProjects,
 }: HeaderProps) {
-  const root: HTMLElement = document.querySelector("#root")!;
   const { theme, toggleTheme } = useTheme();
-  const { language, setLanguage, txt } = useLanguage();
+  const { toggleLanguage, txt } = useLanguage();
 
   const [isNavbarSupportedContentShown, setIsNavbarSupportedContentShown] =
     useState(false);
@@ -86,7 +85,7 @@ export default function Header({
             </button>
             <button
               className="translateBtn flex gap-1 border-1 py-1 px-1.5 rounded-md items-center text-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:bg-[var(--text-primary)] transition-colors duration-200 cursor-pointer"
-              onClick={() => setLanguage(language == "pt" ? "en" : "pt")}
+              onClick={toggleLanguage}
             >
               <Translate />
               <span className="hidden md:block">{txt.nav.translate}</span>
