@@ -35,6 +35,12 @@
       "projects": "Projetos",
       "contactMe": "Contatos"
     },
+    "cookies": {
+      "title": "Este site usa cookies",
+      "paragraph": "Este site usa cookies para melhorar sua experiência. Clicando em [aceitar] você estará consentindo com o uso de cookies para armazenar suas preferências de tema e idioma.",
+      "accept": "Aceitar",
+      "decline": "Recusar"
+    },
     "backToTopBtnText": "Voltar ao topo",
     "checkProject": "Confira no GitHub"
   },
@@ -73,6 +79,12 @@
       "tech": "Technologies",
       "projects": "Projects",
       "contactMe": "Contact me"
+    },
+    "cookies": {
+      "title": "This page uses cookies",
+      "paragraph": "This page uses cookies to improve your experience. By clicking [Accept] you will consent to the use of cookies to store your theme and language preferences.",
+      "accept": "Accept",
+      "decline": "Decline"
     },
     "backToTopBtnText": "Back to top",
     "checkProject": "Check it on GitHub"

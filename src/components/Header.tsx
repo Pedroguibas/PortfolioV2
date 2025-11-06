@@ -24,13 +24,8 @@ export default function Header({
   scrollToProjects,
 }: HeaderProps) {
   const root: HTMLElement = document.querySelector("#root")!;
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, txt } = useLanguage();
-
-  const toggleDark = () => {
-    root.classList.toggle("dark");
-    setTheme(theme == "dark" ? "light" : "dark");
-  };
 
   const [isNavbarSupportedContentShown, setIsNavbarSupportedContentShown] =
     useState(false);
@@ -84,7 +79,7 @@ export default function Header({
           </button>
           <div className="col-span-8 sm:col-span-9 md:col-span-10 flex justify-end items-center gap-3">
             <button
-              onClick={toggleDark}
+              onClick={toggleTheme}
               className="text-[var(--text-primary)] text-xl hover:text-amber-300 cursor-pointer transition-colors duration-200"
             >
               {theme == "dark" ? <SunFill /> : <MoonStarsFill />}

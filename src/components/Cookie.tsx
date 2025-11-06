@@ -16,7 +16,7 @@ export default function Cookie() {
     setDismissed(true);
   };
 
-  if (Cookies.get("accepetedCookies") == "accepted") return <></>;
+  if (Cookies.get("acceptedCookies") == "accepted") return <></>;
 
   return (
     <div
@@ -31,22 +31,18 @@ export default function Cookie() {
         <XSquare />
       </button>
       <h1 className="text-2xl text-[var(--text-primary)] mt-2">
-        Este site usa cookies
+        {txt.cookies.title}
       </h1>
-      <p className="text-justify mt-4">
-        este site usa cookies para melhorar sua experiência. Clicando em
-        "aceitar cookies" você estará consentindo com o uso de cookies para
-        armazenar suas preferências de tema e idioma.
-      </p>
+      <p className="text-justify mt-4">{txt.cookies.paragraph}</p>
       <div className="flex justify-around w-full mt-6 mb-4">
         <button
           onClick={handleAcceptClick}
           className="text-[var(--highlight-primary)] border border-[var(--highlight-primary)] rounded-lg py-2 px-4 hover:text-white hover:bg-[var(--highlight-primary)] cursor-pointer transition-colors duration-200"
         >
-          Aceitar
+          {txt.cookies.accept}
         </button>
         <button className="border py-2 px-4 rounded-lg cursor-pointer transition-colors duration-200 hover:bg-[var(--text-primary)] hover:border-[var(--text-primary)] hover:text-[var(--bg-secondary)]">
-          Recusar
+          {txt.cookies.decline}
         </button>
       </div>
     </div>
