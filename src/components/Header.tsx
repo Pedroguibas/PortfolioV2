@@ -23,14 +23,8 @@ export default function Header({
   scrollToAbout,
   scrollToProjects,
 }: HeaderProps) {
-  const root: HTMLElement = document.querySelector("#root")!;
-  const { theme, setTheme } = useTheme();
-  const { language, setLanguage, txt } = useLanguage();
-
-  const toggleDark = () => {
-    root.classList.toggle("dark");
-    setTheme(theme == "dark" ? "light" : "dark");
-  };
+  const { theme, toggleTheme } = useTheme();
+  const { toggleLanguage, txt } = useLanguage();
 
   const [isNavbarSupportedContentShown, setIsNavbarSupportedContentShown] =
     useState(false);
@@ -84,14 +78,14 @@ export default function Header({
           </button>
           <div className="col-span-8 sm:col-span-9 md:col-span-10 flex justify-end items-center gap-3">
             <button
-              onClick={toggleDark}
+              onClick={toggleTheme}
               className="text-[var(--text-primary)] text-xl hover:text-amber-300 cursor-pointer transition-colors duration-200"
             >
               {theme == "dark" ? <SunFill /> : <MoonStarsFill />}
             </button>
             <button
               className="translateBtn flex gap-1 border-1 py-1 px-1.5 rounded-md items-center text-[var(--text-primary)] hover:text-[var(--bg-primary)] hover:bg-[var(--text-primary)] transition-colors duration-200 cursor-pointer"
-              onClick={() => setLanguage(language == "pt" ? "en" : "pt")}
+              onClick={toggleLanguage}
             >
               <Translate />
               <span className="hidden md:block">{txt.nav.translate}</span>
