@@ -41,7 +41,10 @@ export default function Cookie() {
         >
           {txt.cookies.accept}
         </button>
-        <button className="border py-2 px-4 rounded-lg cursor-pointer transition-colors duration-200 hover:bg-[var(--text-primary)] hover:border-[var(--text-primary)] hover:text-[var(--bg-secondary)]">
+        <button
+          onClick={() => setDismissed(true)}
+          className="border py-2 px-4 rounded-lg cursor-pointer transition-colors duration-200 hover:bg-[var(--text-primary)] hover:border-[var(--text-primary)] hover:text-[var(--bg-secondary)]"
+        >
           {txt.cookies.decline}
         </button>
       </div>
