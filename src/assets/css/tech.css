@@ -18,7 +18,8 @@
   left: 0;
   z-index: -1;
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       transparent 0px,
       transparent 25px,
       var(--text-primary) 25px,
@@ -99,8 +100,11 @@
   color: var(--tech-icon-color);
   transform-style: preserve-3d;
 
-  box-shadow: var(--tech-icon-dark) 5px 5px, var(--tech-icon-dark) 4px 4px,
-    var(--tech-icon-dark) 3px 3px, var(--tech-icon-dark) 2px 2px,
+  box-shadow:
+    var(--tech-icon-dark) 5px 5px,
+    var(--tech-icon-dark) 4px 4px,
+    var(--tech-icon-dark) 3px 3px,
+    var(--tech-icon-dark) 2px 2px,
     var(--tech-icon-dark) 1px 1px;
 
   &:hover,
@@ -108,9 +112,13 @@
     color: var(--tech-icon-light);
     transform: translateZ(0.5rem);
     border-color: var(--tech-icon-light);
-    box-shadow: var(--tech-icon-color) 5px 5px, var(--tech-icon-color) 4px 4px,
-      var(--tech-icon-color) 3px 3px, var(--tech-icon-color) 2px 2px,
-      var(--tech-icon-color) 1px 1px, var(--tech-icon-light) 6px 6px 20px;
+    box-shadow:
+      var(--tech-icon-color) 5px 5px,
+      var(--tech-icon-color) 4px 4px,
+      var(--tech-icon-color) 3px 3px,
+      var(--tech-icon-color) 2px 2px,
+      var(--tech-icon-color) 1px 1px,
+      var(--tech-icon-light) 6px 6px 20px;
 
     #root.dark & .techIcon {
       filter: drop-shadow(0 0 10px var(--tech-icon-light));
@@ -155,6 +163,12 @@
     --tech-icon-dark: hsl(189, 100%, 40%);
   }
 
+  &.next {
+    --tech-icon-light: hsl(103, 0%, 95%);
+    --tech-icon-color: hsl(191, 0%, 85%);
+    --tech-icon-dark: hsl(191, 0%, 60%);
+  }
+
   &.mysql {
     --tech-icon-light: hsl(191, 100%, 40%);
     --tech-icon-color: hsl(191, 100%, 28%);
@@ -171,6 +185,12 @@
     --tech-icon-light: hsl(103, 50%, 53%);
     --tech-icon-color: hsl(115, 37%, 39%);
     --tech-icon-dark: hsl(115, 45%, 24%);
+  }
+
+  &.nest {
+    --tech-icon-light: hsl(346, 75%, 60%);
+    --tech-icon-color: hsl(346, 75%, 51%);
+    --tech-icon-dark: hsl(346, 75%, 35%);
   }
 
   &.php {

@@ -24,6 +24,10 @@
     "name": "ReactJs"
   },
   {
+    "icon": "next",
+    "name": "NextJs"
+  },
+  {
     "icon": "mysql",
     "name": "MySQL"
   },
@@ -34,6 +38,10 @@
   {
     "icon": "node",
     "name": "NodeJs"
+  },
+  {
+    "icon": "nest",
+    "name": "NestJs"
   },
   {
     "icon": "php",
