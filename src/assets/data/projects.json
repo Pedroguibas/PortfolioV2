@@ -24,6 +24,24 @@
   {
     "projectTexts": {
       "pt": {
+        "projectTitle": "C_mulation",
+        "projectDiscription": "Uma simulação básica de física para jogos 2d construída em C++ usando a API do Windows, demosntrando design orientado à objetos e princípios de interações de baixo nível com o sistema."
+      },
+      "en": {
+        "projectTitle": "C_mulation",
+        "projectDiscription": "A basic 2d game physics simulation built in C++ using the Windows API, demonstrating object-oriented design principles and low-level system interaction."
+      }
+    },
+    "projectTechList": [
+      "C++",
+      "Win32 API"
+    ],
+    "image": "c_mulation",
+    "source": "https://github.com/Pedroguibas/c_mulation"
+  },
+  {
+    "projectTexts": {
+      "pt": {
         "projectTitle": "Disc-ing",
         "projectDiscription": "Plataforma de avaliação de jogos que reúne análises de especialistas e opiniões da comunidade, oferecendo notas, críticas e rankings atualizados para ajudar jogadores a descobrir os melhores títulos."
       },
